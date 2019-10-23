@@ -1,10 +1,10 @@
 {
   "name": "jsonata-ui-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Core AST and serializers for jsonata-ui",
   "source": "src/index.ts",
   "main": "dist/index.js",
-  "unpkg": "dist/index.umd.js", 
+  "unpkg": "dist/index.umd.js",
   "scripts": {
     "start": "microbundle --watch",
     "build": "microbundle -f cjs,umd",
