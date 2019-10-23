@@ -30,6 +30,7 @@ console.log("There and back again", input, output);
  - Regex: `$matcher := /[a-z]*an[a-z]*/i`
  - Position variable binding: `library.books#$ib['Kernighan' in authors]`
  - Context variable binding: `library.loans@$l.books@$b[$l.isbn=$b.isbn]`
+ - Transform operator: `| Account.Order.Product | {'Price': Price * 1.2} |`
  - No tests coverage yet (should be able to re-use tests from jsonata-js)
  - Merged back into main `jsonata-js` package
  
