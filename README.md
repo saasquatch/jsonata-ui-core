@@ -19,6 +19,7 @@ const ast = jsonata(input).ast();
 const output = serializer(ast);
 console.log("There and back again", input, output);
 ```
+[![Edit jsonata serializer demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/jsonata-serializer-demo-q67m3?fontsize=14)
 
 ## Not Implemented
 
