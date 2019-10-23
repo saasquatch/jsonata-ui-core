@@ -4,13 +4,13 @@
 
 Core AST and serializers for jsonata-ui
 
-```
+```sh
 npm install jsonata-ui-core
 ```
 
 The core library includes a serializer to turning JSONata ASTs back into strings.
 
-```
+```js
 import {serializer} from "jsonata-ui-core";
 import jsonata from "jsonata"
 
