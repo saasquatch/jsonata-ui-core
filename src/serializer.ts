@@ -53,12 +53,18 @@ export default function serializer(node: AST): string {
     if (node.stages) {
       stages = node.stages.map(serializer).join("");
     }
+    let bind = "";
+    if (node.focus){
+      let index = node.index ? "$" + node.index : "";
+      let focus = node.focus ? "$" + node.focus : "";
+      bind = "@" + index + focus
+    }
     let name = node.value;
     if (/\s/.test(name) || ["null", "false", "true"].includes(name)) {
       // Escaped for whitespace
       name = "`" + name + "`";
     }
-    return name + stages;
+    return name + bind + stages;
   } else if (node.type === "filter") {
     return "[" + serializer(node.expr) + "]";
   } else if (node.type === "bind") {
@@ -87,9 +93,11 @@ export default function serializer(node: AST): string {
   } else if (node.type === "block") {
     return "(" + node.expressions.map(serializer).join("; ") + ")";
   } else if (node.type === "path") {
-    return node.steps.map(serializer).join(".");
+    return node.steps.reduce((arr,c) => [ ...(arr.length?[...arr, c.type ==="sort" ? "^":"."]:[]), serializer(c)], []).join("");
   } else if (node.type === "apply") {
-    return node.value;
+    return serializer(node.lhs) + " " + node.value + " " + serializer(node.rhs);
+  } else if (node.type === "sort") {
+    return "(" + node.terms.map( t=> t.descending?">":"<" + serializer(t.expression)) + ")";
   } else if (node.type === "unary") {
     if (node.value === "{" && node.type === "unary") {
       let o = node as ObjectUnaryNode;

@@ -8,7 +8,7 @@
   "scripts": {
     "start": "microbundle --watch",
     "build": "microbundle -f cjs,umd",
-    "test": "echo \"Error: no test specified\""
+    "test": "nyc cucumber-js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,13 @@
   },
   "homepage": "https://github.com/jsonata-ui/jsonata-ui-core#readme",
   "devDependencies": {
-    "microbundle": "^0.11.0"
+    "@types/chai": "^4.2.4",
+    "@types/cucumber": "^4.0.7",
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.2",
+    "jsonata": "^1.7.0",
+    "microbundle": "^0.11.0",
+    "nyc": "^14.1.1",
+    "ts-node": "^8.4.1"
   }
 }
