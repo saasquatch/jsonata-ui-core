@@ -24,6 +24,9 @@ console.log("There and back again", input, output);
 ## Not Implemented
 
  - Some operators not yet implemented
+ - Complex functions: `λ($f) { λ($x) { $x($x) }( λ($g) { $f( (λ($a) {$g($g)($a)}))})}(λ($f) { λ($n) { $n < 2 ? 1 : $n * $f($n - 1) } })(6)`
+ - Apply operator: `Customer.Email ~> $substringAfter("@") ~> $substringBefore(".") ~> $uppercase()`
+ - Sort: `foo^(bar)`
  - No tests coverage yet (should be able to re-use tests from jsonata-js)
  - Merged back into main `jsonata-js` package
  
