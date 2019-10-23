@@ -24,7 +24,7 @@ console.log("There and back again", input, output);
 ## Not Implemented
 
  - Some operators not yet implemented
- - Complex functions: `λ($f) { λ($x) { $x($x) }( λ($g) { $f( (λ($a) {$g($g)($a)}))})}(λ($f) { λ($n) { $n < 2 ? 1 : $n * $f($n - 1) } })(6)`
+ - Complex `thunk` functions: `λ($f) { λ($x) { $x($x) }( λ($g) { $f( (λ($a) {$g($g)($a)}))})}(λ($f) { λ($n) { $n < 2 ? 1 : $n * $f($n - 1) } })(6)`
  - Apply operator: `Customer.Email ~> $substringAfter("@") ~> $substringBefore(".") ~> $uppercase()`
  - Sort: `foo^(bar)`
  - Regex: `$matcher := /[a-z]*an[a-z]*/i`
