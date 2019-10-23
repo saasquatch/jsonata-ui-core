@@ -1,3 +1,6 @@
+dist
+.rst2_cache_*
+
 # Logs
 logs
 *.log

@@ -1,0 +1,29 @@
+{
+  "name": "jsonata-ui-core",
+  "version": "1.0.0",
+  "description": "Core AST and serializers for jsonata-ui",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.js", 
+  "scripts": {
+    "start": "microbundle --watch",
+    "build": "microbundle -f cjs,umd",
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsonata-ui/jsonata-ui-core.git"
+  },
+  "keywords": [
+    "jsonata"
+  ],
+  "author": "logvol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsonata-ui/jsonata-ui-core/issues"
+  },
+  "homepage": "https://github.com/jsonata-ui/jsonata-ui-core#readme",
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
