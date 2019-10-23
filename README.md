@@ -28,6 +28,7 @@ console.log("There and back again", input, output);
  - Apply operator: `Customer.Email ~> $substringAfter("@") ~> $substringBefore(".") ~> $uppercase()`
  - Sort: `foo^(bar)`
  - Regex: `$matcher := /[a-z]*an[a-z]*/i`
+ - Position variable binding: `library.books#$ib['Kernighan' in authors]`
  - No tests coverage yet (should be able to re-use tests from jsonata-js)
  - Merged back into main `jsonata-js` package
  
