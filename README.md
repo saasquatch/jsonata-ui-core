@@ -38,4 +38,5 @@ This library serializes ASTs, and aims to match versions numbers with jsonata-js
  - Regex: `$matcher := /[a-z]*an[a-z]*/i`
  - Partial function application `( $first5 := $substring(?, 0, 5); $first5("Hello, World") )`
  - Transform operator: `| Account.Order.Product | {'Price': Price * 1.2} |`
+ - Conditional without else: `Account ? null` vs `Account ? null : true`
  - Merged back into main `jsonata-js` package
