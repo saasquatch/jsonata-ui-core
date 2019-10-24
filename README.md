@@ -21,6 +21,16 @@ console.log("There and back again", input, output);
 ```
 [![Edit jsonata serializer demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/jsonata-serializer-demo-q67m3?fontsize=14)
 
+## Versions matching with JSONata
+
+This library serializes ASTs, and aims to match versions numbers with jsonata-js. This is because the ASTs returned by jsonata vary significantly by version.
+
+| [jsonata](https://www.npmjs.com/package/jsonata) | Jsonata-ui-core |
+|---------|-----------------|
+| 1.7.x   | 1.7.x           |
+| <1.6.x  | Not supported   |
+
+
 ## Not Implemented
 
  - Some operators not yet implemented
