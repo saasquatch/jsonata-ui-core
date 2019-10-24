@@ -5,6 +5,7 @@
   "source": "src/index.ts",
   "main": "dist/index.js",
   "unpkg": "dist/index.umd.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "start": "microbundle --watch",
     "build": "microbundle -f cjs,umd",
