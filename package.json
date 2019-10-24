@@ -1,6 +1,6 @@
 {
   "name": "jsonata-ui-core",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Core AST and serializers for jsonata-ui",
   "source": "src/index.ts",
   "main": "dist/index.js",
