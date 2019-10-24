@@ -25,12 +25,7 @@ console.log("There and back again", input, output);
 
  - Some operators not yet implemented
  - Complex `thunk` functions: `λ($f) { λ($x) { $x($x) }( λ($g) { $f( (λ($a) {$g($g)($a)}))})}(λ($f) { λ($n) { $n < 2 ? 1 : $n * $f($n - 1) } })(6)`
- - Apply operator: `Customer.Email ~> $substringAfter("@") ~> $substringBefore(".") ~> $uppercase()`
- - Sort: `foo^(bar)`
  - Regex: `$matcher := /[a-z]*an[a-z]*/i`
- - Position variable binding: `library.books#$ib['Kernighan' in authors]`
- - Context variable binding: `library.loans@$l.books@$b[$l.isbn=$b.isbn]`
+ - Partial function application `( $first5 := $substring(?, 0, 5); $first5("Hello, World") )`
  - Transform operator: `| Account.Order.Product | {'Price': Price * 1.2} |`
- - No tests coverage yet (should be able to re-use tests from jsonata-js)
  - Merged back into main `jsonata-js` package
- 
