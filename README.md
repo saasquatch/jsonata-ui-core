@@ -40,3 +40,7 @@ This library serializes ASTs, and aims to match versions numbers with jsonata-js
  - Transform operator: `| Account.Order.Product | {'Price': Price * 1.2} |`
  - Conditional without else: `Account ? null` vs `Account ? null : true`
  - Merged back into main `jsonata-js` package
+
+ ## Sponsors
+ 
+ Sponsored by [SaaSquatch](http://saasquatch.com). Loyalty, point and referral programs for forward-looking companies.
