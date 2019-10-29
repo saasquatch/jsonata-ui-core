@@ -44,25 +44,25 @@ type BinaryValue =
 export interface FunctionNode extends Node {
   type: "function";
   value: "(";
-  arguments: [JsonataASTNode];
+  arguments: JsonataASTNode[];
   procedure: VariableNode;
 }
 
 export interface VariableNode extends Node {
   type: "variable";
   value: string;
-  predicate?: [JsonataASTNode];
-  stages?: [JsonataASTNode];
+  predicate?: JsonataASTNode[];
+  stages?: JsonataASTNode[];
 }
 
 export interface PathNode extends Node {
   type: "path";
-  steps: [JsonataASTNode];
+  steps: JsonataASTNode[];
 }
 
 export interface BlockNode extends Node {
   type: "block";
-  expressions: [JsonataASTNode];
+  expressions: JsonataASTNode[];
 }
 
 export interface ApplyNode extends Node {
@@ -87,7 +87,7 @@ export type UnaryNode = ObjectUnaryNode | ArrayUnaryNode;
 export interface ObjectUnaryNode extends Node {
   type: "unary";
   value: "{";
-  lhs: [UnaryTuple];
+  lhs: UnaryTuple[];
 }
 
 export interface ArrayUnaryNode extends Node {
@@ -112,7 +112,7 @@ export interface ValueNode extends Node {
 export interface NameNode extends Node {
   type: "name";
   value: string;
-  stages?: [JsonataASTNode];
+  stages?: JsonataASTNode[];
   focus?: string;
   index?: string;
   tuple?: true;
