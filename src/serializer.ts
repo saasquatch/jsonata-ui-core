@@ -4,6 +4,7 @@ import { JsonataASTNode, ObjectUnaryNode, ArrayUnaryNode } from "./types";
 type AST = JsonataASTNode;
 
 export default function serializer(node: AST): string {
+  if(!node) return undefined;
   if (node.type === "binary") {
     return serializer(node.lhs) + " " + node.value + " " + serializer(node.rhs);
   } else if (node.type === "function") {
