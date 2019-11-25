@@ -131,7 +131,7 @@ export interface ConditionNode extends Node {
   type: "condition";
   condition: JsonataASTNode;
   then: JsonataASTNode;
-  else: JsonataASTNode;
+  else?: JsonataASTNode;
 }
 
 export interface LambdaNode extends Node {
