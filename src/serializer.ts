@@ -79,7 +79,7 @@ export default function serializer(node: AST): string {
       "}"
     );
   } else if (node.type === "condition") {
-    return (`${serializer(node.condition)} ? ${serializer(node.then)}${node.else ? `: ${serializer(node.else)}` : ''}`);
+    return (`${serializer(node.condition)} ? ${serializer(node.then)}${node.else ? ` : ${serializer(node.else)}` : ''}`);
   } else if (node.type === "value") {
     if (node.value === null) return "null";
     if (node.value === false) return "false";
