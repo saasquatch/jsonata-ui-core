@@ -1,4 +1,4 @@
-import serializer from "./serializer";
+import serializer, { escapeString } from "./serializer";
 
-export { serializer }
+export { serializer, escapeString }
 export * from "./types"
