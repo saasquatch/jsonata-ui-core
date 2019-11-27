@@ -3,6 +3,18 @@ import { JsonataASTNode, ObjectUnaryNode, ArrayUnaryNode } from "./types";
 // TODO: Should eventually replace this with types from the `jsonata` package once they're complete.
 type AST = JsonataASTNode;
 
+export function escapeString(name:string){
+  if (
+    /\s/.test(name) 
+    || ["null", "false", "true"].includes(name) 
+    || /^\d/.test(name)
+    || !(/^[a-zA-Z()]+$/.test(name))
+  ) {
+    return "`" + name + "`";
+  }
+  return name;
+}
+
 export default function serializer(node: AST): string {
   if(!node) return undefined;
   if (node.type === "binary") {
@@ -61,10 +73,7 @@ export default function serializer(node: AST): string {
       bind = "@" + index + focus
     }
     let name = node.value;
-    if (/\s/.test(name) || ["null", "false", "true"].includes(name)) {
-      // Escaped for whitespace
-      name = "`" + name + "`";
-    }
+    name = escapeString(name);
     return name + bind + stages;
   } else if (node.type === "filter") {
     return "[" + serializer(node.expr) + "]";

@@ -36,5 +36,30 @@ Feature: AST Serializer
             | loans@$foo#$bar |
             | loans@$foo      |
             | loans#$bar      |
+            | foo-bar         |
+            | foo+bar         |
+            | foo/bar         |
+            | foo*bar         |
+            | `😊`          |
+            | "foo-bar"       |
+            | "foo+bar"       |
+            | "foo/bar"       |
+            | "foo*bar"       |
+            | "foo-bar"       |
+            | "foo+bar"       |
+            | "foo/bar"       |
+            | "foo*bar"       |
+            | "\""            |
+            | foo_bar         |
+            | `foo_bar`       |
+            | foo1bar         |
+            | foobar1         |
+            | foobar_1        |
+            | `1foobar`       |
+            | `foo-bar`       |
+            | `foo+bar`       |
+            | `foo/bar`       |
+            | `foo*bar`       |
+            | `foobar-1`      |
 
 
