@@ -61,5 +61,6 @@ Feature: AST Serializer
             | `foo/bar`       |
             | `foo*bar`       |
             | `foobar-1`      |
+            | foo.bar.baz     |
 
 
