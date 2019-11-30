@@ -8,7 +8,7 @@ export function escapeString(name:string){
     /\s/.test(name) 
     || ["null", "false", "true"].includes(name) 
     || /^\d/.test(name)
-    || !(/^[a-zA-Z().]+$/.test(name))
+    || !(/^[a-zA-Z()._]+$/.test(name))
   ) {
     return "`" + name + "`";
   }
