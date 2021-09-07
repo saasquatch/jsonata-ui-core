@@ -5,8 +5,8 @@ type AST = JsonataASTNode;
 
 export function escapeString(name:string){
   if (
-    /\s/.test(name) 
-    || ["null", "false", "true"].includes(name) 
+    /\s/.test(name)
+    || ["null", "false", "true"].includes(name)
     || /^\d/.test(name)
     || !(/^[a-zA-Z()._]+$/.test(name))
   ) {
@@ -105,6 +105,7 @@ export default function serializer(node: AST): string {
   } else if (node.type === "unary") {
     if (node.value === "{" && node.type === "unary") {
       let o = node as ObjectUnaryNode;
+      const keepArrayValue = node.keepArray ? "[]" : ""
       return (
         node.value +
         "\n\t" +
@@ -114,7 +115,7 @@ export default function serializer(node: AST): string {
               serializer(set[0]) + ":" + serializer(set[1])
           )
           .join(",\n\t") +
-        "\n}"
+        "\n}"+keepArrayValue
       );
     } else if (node.value === "[") {
       let a = node as ArrayUnaryNode;
