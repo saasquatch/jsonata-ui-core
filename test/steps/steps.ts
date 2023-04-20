@@ -43,7 +43,7 @@ function filterObject(obj: any, key: string) {
 
 Then("the ASTs should match", async function(this: World) {
   const one = filterClone(this.state.ast, "position");
-  const two = filterClone(this.state.ast, "position");
+  const two = filterClone(this.state.ast2, "position");
   expect(one).to.be.deep.equals(two);
 });
 

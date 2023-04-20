@@ -58,6 +58,7 @@ export interface VariableNode extends Node {
 export interface PathNode extends Node {
   type: "path";
   steps: JsonataASTNode[];
+  keepSingletonArray?: boolean
 }
 
 export interface BlockNode extends Node {
@@ -88,6 +89,7 @@ export interface ObjectUnaryNode extends Node {
   type: "unary";
   value: "{";
   lhs: UnaryTuple[];
+  keepArray?: boolean;
 }
 
 export interface ArrayUnaryNode extends Node {
